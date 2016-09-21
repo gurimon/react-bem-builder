@@ -1,20 +1,20 @@
-# react-bem
+# react-bem-builder
 
-A BEM class can be made easily.
+React and BEM.
 
 ## Installation
 ```sh
-$ npm i -S react-bem
+$ npm i -S react-bem-builder
 ```
 
 ## Usage
 
 ```javascript
 // ES2015 imports
-import createBemClass from 'react-bem';
+import createBemClass from 'react-bem-builder';
 
 // ES5 require
-var createBemClass = require('react-bem');
+var createBemClass = require('react-bem-builder');
 ```
 
 ```javascript
@@ -48,7 +48,7 @@ b('item', { selected: true });
 
 #### Use with React
 ```javascript
-import createBemClass from 'react-bem';
+import createBemClass from 'react-bem-builder';
 
 const List = React.createClass({
   render() {

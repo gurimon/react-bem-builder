@@ -1,7 +1,7 @@
 {
   "name": "react-bem-builder",
   "version": "1.0.0",
-  "description": "React and BEM",
+  "description": "React and BEM.",
   "main": "./dist/index.js",
   "scripts": {
     "babel": "babel ./src --out-dir ./dist"
