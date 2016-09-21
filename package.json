@@ -1,26 +1,27 @@
 {
-  "name": "react-bem",
+  "name": "react-bem-builder",
   "version": "1.0.0",
-  "description": "A BEM class can be made easily.",
+  "description": "React and BEM",
   "main": "./dist/index.js",
   "scripts": {
     "babel": "babel ./src --out-dir ./dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gurimon/react-bem"
+    "url": "git+https://github.com/gurimon/react-bem-builder"
   },
   "keywords": [
     "react",
     "bem",
-    "className"
+    "className",
+    "class"
   ],
   "author": "gurimon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gurimon/react-bem/issues"
+    "url": "https://github.com/gurimon/react-bem-builder/issues"
   },
-  "homepage": "https://github.com/gurimon/react-bem#readme",
+  "homepage": "https://github.com/gurimon/react-bem-builder#readme",
   "devDependencies": {
     "babel-cli": "6.10.1",
     "babel-core": "6.10.4",
