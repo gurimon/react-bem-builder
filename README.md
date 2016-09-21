@@ -1,5 +1,12 @@
 # react-bem
 
+A BEM class can be made easily.
+
+## Installation
+```sh
+$ npm i -S react-bem
+```
+
 ## Usage
 
 ```javascript
