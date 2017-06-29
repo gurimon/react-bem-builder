@@ -4,67 +4,67 @@ React and BEM.
 
 ## Installation
 ```sh
-$ npm i -S react-bem-builder
+$ yarn add react-bem-builder
+
+or
+
+$ npm i react-bem-builder
 ```
 
 ## Usage
 
 ```javascript
-// ES2015 imports
-import createBemClass from 'react-bem-builder';
-
-// ES5 require
-var createBemClass = require('react-bem-builder');
+import bemClassnames from 'react-bem-builder';
 ```
 
 ```javascript
+const c = bemClassnames('hoge');
 // hoge
-const cn = createBemClass('hoge');
 
-// hoge__item
 cn('item');
+// hoge__item
 
 ------
 
+const a = bemClassnames('hoge', { me: false });
 // hoge
-const a = createBemClass('hoge', { me: false });
 
+const b = bemClassnames('hoge', [ 'me' ]);
 // hoge hoge--me
-const b = createBemClass('hoge', { me: true });
 
-// hoge__item
 a('item');
+// hoge__item
 
-// hoge__item--selected
 a('item', { selected: true });
+// hoge__item--selected
 
-// hoge__item hoge--me__item
 b('item');
+// hoge__item hoge--me__item
 
+b('item', [ 'selected' ]);
 // hoge__item hoge__item--selected hoge--me__item hoge--me__item--selected
-b('item', { selected: true });
 
 ```
 
 #### Use with React
 ```javascript
-import createBemClass from 'react-bem-builder';
+import bemClassnames from 'react-bem-builder';
 
-const List = React.createClass({
-  render() {
-    const cn = createBemClass('list');
-    return (
-      <div className={cn()}>
-        <h1 className={cn('title')}>list</h1>
-        <ul>
-          <li className={cn('item', { selected: true })}>1</li>
-          <li className={cn('item', 'hoge' { selected: false })}>2</li>
-          <li className={cn('item', 'hoge' { selected: true })}>3</li>
-        </ul>
-      </div>
-    )
-  }
-});
+const cn = bemClassnames('list');
+
+const List = props => {
+  return (
+    <div className={cn()}>
+      <h1 className={cn('title')}>list</h1>
+      <ul>
+        <li className={cn('item', { selected: true })}>1</li>
+        <li className={cn('item', 'hoge', { selected: false })}>2</li>
+        <li className={cn('item', 'hoge', [ 'selected' ])}>3</li>
+      </ul>
+    </div>
+  )
+};
+
 ```
 
 ### HTML
